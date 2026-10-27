@@ -1,624 +1,198 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ne">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twanabasu Business Group (T.B Group) | Baneshwor, Kathmandu</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for professional icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter & Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        tbGreen: '#1b8a3e',
-                        tbYellow: '#eab308',
-                        tbRed: '#dc2626',
-                        tbDark: '#0f172a',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <title>भुक्तानी सम्बन्धी ध्यानाकर्षण</title>
     <style>
-        .gradient-border {
-            position: relative;
-            border-radius: 1rem;
-            background: linear-gradient(60deg, #1b8a3e, #eab308, #dc2626);
-            padding: 3px;
+        body {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .gradient-border-inner {
-            background: white;
-            border-radius: calc(1rem - 2px);
+        .notice-container {
+            width: 800px;
+            background-color: #f4f1ea;
+            border: 4px solid #8b1e1e;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-sizing: border-box;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Header Section */
+        .notice-header {
+            background-color: #8b1e1e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
         }
-        .animate-fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
+        .notice-header .sub-title {
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .notice-header h1 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .notice-header .footer-sub {
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* Subject Bar */
+        .subject-bar {
+            background-color: #dcd7ce;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+            border-bottom: 1px solid #c8c2b6;
+        }
+
+        /* Main Body Content */
+        .notice-body {
+            padding: 25px 40px;
+            text-align: center;
+        }
+        .notice-body .group-owner {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+        .notice-body h2 {
+            font-size: 38px;
+            color: #8b1e1e;
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+        .notice-body .group-name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #222;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+        }
+        .notice-body .description {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #111;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* Dark Alert Bar */
+        .alert-bar {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* Contact Section Grid */
+        .contact-grid {
+            display: flex;
+            border: 1px solid #b5ad9e;
+            margin-bottom: 15px;
+        }
+        .contact-box {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+        }
+        .contact-box:first-child {
+            border-right: 1px solid #b5ad9e;
+        }
+        .contact-box h3 {
+            font-size: 15px;
+            color: #222;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .contact-box .phones {
+            font-size: 18px;
+            font-weight: bold;
+            color: #111;
+            line-height: 1.8;
+        }
+        .contact-box .note {
+            font-size: 13px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Bottom Footer Note */
+        .notice-footer-note {
+            text-align: center;
+            font-size: 12px;
+            color: #444;
+            padding-bottom: 15px;
+            border-top: 1px solid #dcd7ce;
+            padding-top: 10px;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-tbYellow selection:text-slate-900">
+<body>
 
-    <!-- Top Bar -->
-    <div class="bg-tbDark text-slate-200 text-xs sm:text-sm py-2.5 px-4 sm:px-8 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-tbRed"></i> Baneshwor, Kathmandu, Nepal</span>
-                <span class="hidden md:inline text-slate-600">|</span>
-                <a href="tel:015242096" class="hover:text-tbYellow transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-tbGreen"></i> 01-5242096</a>
-                <a href="tel:9851420084" class="hover:text-tbYellow transition">9851420084</a>
-                <a href="tel:9765014003" class="hover:text-tbYellow transition">9765014003</a>
+<div class="notice-container">
+    <!-- Header -->
+    <div class="notice-header">
+        <div class="sub-title">📢 सार्वजनिक सूचना 📢</div>
+        <h1>भुक्तानी सम्बन्धी ध्यानाकर्षण</h1>
+        <div class="footer-sub">वेबसाइट निर्माण सेवाको बाँकी भुक्तानीबारे</div>
+    </div>
+
+    <!-- Subject Bar -->
+    <div class="subject-bar">
+        विषय: वेबसाइट निर्माण गरेबापतको भुक्तानी प्राप्त नभएको सम्बन्धमा
+    </div>
+
+    <!-- Body -->
+    <div class="notice-body">
+        <div class="group-owner">दानाबासु ग्रुपका अध्यक्ष</div>
+        <h2>हरि राम श्रेष्ठ</h2>
+        <div class="group-name">TWANABASU GROUP</div>
+
+        <div class="description">
+            हाम्रो भनाइअनुसार, श्री <b>हरि राम श्रेष्ठ</b> ले वेबसाइट निर्माण गर्न दिनुभएको भए तापनि <b>सहमत रकम हालसम्म प्राप्त भएको छैन</b>। वेबसाइट निर्माणमा खर्चिएको समय, श्रम र प्राविधिक सेवाको उचित भुक्तानीका लागि सम्बन्धित पक्षलाई यथाशीघ्र सम्पर्क गरी विषय टुङ्ग्याउन अनुरोध गर्दछौँ।
+        </div>
+
+        <!-- Dark Alert Banner -->
+        <div class="alert-bar">
+            सम्बन्धित पक्षले भुक्तानीको अवस्था स्पष्ट पार्दै शीघ्र समाधान गर्नुहोस।
+        </div>
+
+        <!-- Contact Grid -->
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h3>हरि राम श्रेष्ठका सम्पर्क नम्बर</h3>
+                <div class="phones">
+                    ०१-५२४२०९६<br>
+                    ९८५१४२००८४<br>
+                    ९७६५०१४००३
+                </div>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="mailto:twanabasugroup@gmail.com" class="hover:text-tbYellow transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-envelope text-tbYellow"></i> twanabasugroup@gmail.com
-                </a>
+            <div class="contact-box">
+                <h3>हाम्रो सम्पर्क नम्बर</h3>
+                <div class="phones" style="margin-top: 15px;">
+                    ९७६८०८५६९३
+                </div>
+                <div class="note">भुक्तानी तथा छलफलका लागि सम्पर्क गर्नुहोस।</div>
             </div>
         </div>
     </div>
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-12 h-12 rounded-full border-2 border-tbGreen bg-white flex items-center justify-center shadow-inner overflow-hidden relative">
-                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-tbGreen/10 via-tbYellow/10 to-tbRed/10"></div>
-                    <span class="font-bold text-tbRed text-lg tracking-tighter">TB</span>
-                </div>
-                <div>
-                    <h1 class="font-serif font-bold text-lg sm:text-xl text-slate-900 group-hover:text-tbRed transition">Twanabasu Business Group</h1>
-                    <p class="text-xs font-semibold tracking-widest text-tbGreen uppercase">T.B Group • Baneshwor</p>
-                </div>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
-                <a href="#companies" class="hover:text-tbGreen transition">Our Group of Companies (9)</a>
-                <a href="#profile" class="hover:text-tbGreen transition">Corporate Profile & HQ</a>
-                <a href="#leadership" class="hover:text-tbGreen transition">Leadership</a>
-                <a href="#contact" class="hover:text-tbGreen transition">Contact</a>
-                <a href="#contact" class="bg-gradient-to-r from-tbGreen to-emerald-600 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md shadow-emerald-600/20 hover:shadow-lg transition">
-                    Get in Touch
-                </a>
-            </nav>
-
-            <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-slate-700 p-2 focus:outline-none" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
-            <a href="#companies" class="block font-medium text-slate-700 hover:text-tbGreen py-1">Our Group of Companies (9)</a>
-            <a href="#profile" class="block font-medium text-slate-700 hover:text-tbGreen py-1">Corporate Profile & HQ</a>
-            <a href="#leadership" class="block font-medium text-slate-700 hover:text-tbGreen py-1">Leadership</a>
-            <a href="#contact" class="block font-medium text-slate-700 hover:text-tbGreen py-1">Contact Us</a>
-            <div class="pt-2">
-                <a href="#contact" class="block text-center bg-tbGreen text-white py-3 rounded-xl font-semibold">Get in Touch</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden py-24 lg:py-36">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-tbGreen/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-tbRed/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-tbYellow/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 text-center max-w-4xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-tbYellow text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm mb-6">
-                <span class="w-2 h-2 rounded-full bg-tbYellow animate-pulse"></span>
-                Multi-Sector Enterprise Group in Baneshwor, Kathmandu
-            </div>
-            
-            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-6">
-                Shaping Excellence Across <span class="text-transparent bg-clip-text bg-gradient-to-r from-tbYellow via-amber-400 to-tbRed">9 Group Companies & Organizations</span>
-            </h1>
-            
-            <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-                Twanabasu Business Group (T.B Group) unites visionary leadership across healthcare, real estate, engineering, trading, media, film, legal research, meditation, and business associations.
-            </p>
-
-            <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="#companies" class="bg-tbGreen hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-tbGreen/30 transition flex items-center gap-2">
-                    Explore All 9 Enterprises <i class="fa-solid fa-arrow-right text-sm"></i>
-                </a>
-                <a href="#profile" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-md transition">
-                    Corporate Headquarters
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9 Companies Grid Section -->
-    <section id="companies" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-tbGreen text-sm font-bold uppercase tracking-widest">Our Group of Companies</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Complete Portfolio (All 9 Entities)</h2>
-                <p class="text-slate-600 text-base">
-                    Click "View Details" on any company or organization below to inspect its scope. All entities operate under centralized coordination in Baneshwor, Kathmandu.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- 1 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-red-50 text-tbRed flex items-center justify-center text-2xl group-hover:bg-tbRed group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-hospital"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-red-100 text-tbRed rounded-full">Company 01</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-tbRed transition">Max Medical College & Hospital Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Advanced healthcare infrastructure, medical education, and community patient care services.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Max Medical College & Hospital Pvt. Ltd.', 'Advanced healthcare infrastructure, medical education, and community patient care services.', 'Healthcare & Medical Education', 'Baneshwor, Kathmandu')" class="text-tbRed font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 2 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl group-hover:bg-tbYellow group-hover:text-slate-900 transition-colors duration-300">
-                                <i class="fa-solid fa-house-chimney"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-amber-100 text-amber-800 rounded-full">Company 02</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-amber-600 transition">Twanabasu Land Ploting & Housing Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Premier real estate planning, structured land plotting, and modern residential housing development.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Twanabasu Land Ploting & Housing Pvt. Ltd.', 'Premier real estate planning, structured land plotting, and modern residential housing development.', 'Real Estate & Housing', 'Baneshwor, Kathmandu')" class="text-amber-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 3 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-emerald-50 text-tbGreen flex items-center justify-center text-2xl group-hover:bg-tbGreen group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-helmet-safety"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-emerald-100 text-tbGreen rounded-full">Company 03</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-tbGreen transition">Twanabasu Engineering Design & Construction Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Professional architectural drafting, civil engineering, structural planning, and building construction.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Twanabasu Engineering Design & Construction Pvt. Ltd.', 'Professional architectural drafting, civil engineering, structural planning, and building construction.', 'Engineering & Construction', 'Baneshwor, Kathmandu')" class="text-tbGreen font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 4 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-shop"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Company 04</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition">Twanabasu Trading & Industry Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Industrial supply chain management, commercial import/export, and wholesale trading solutions.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Twanabasu Trading & Industry Pvt. Ltd.', 'Industrial supply chain management, commercial import/export, and wholesale trading solutions.', 'Trading & Manufacturing', 'Baneshwor, Kathmandu')" class="text-blue-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 5 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-tv"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-800 rounded-full">Company 05</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition">Twanabasu Media & Television Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Broadcasting, digital media production, entertainment programming, and professional advertising campaigns.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Twanabasu Media & Television Pvt. Ltd.', 'Broadcasting, digital media production, entertainment programming, and professional advertising campaigns.', 'Media & Broadcasting', 'Baneshwor, Kathmandu')" class="text-purple-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 6 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-2xl group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-clapperboard"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-pink-100 text-pink-800 rounded-full">Company 06</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-pink-600 transition">Twanabasu Film Pvt. Ltd.</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Feature film production, cinematic distribution, creative arts, and entertainment media development.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Twanabasu Film Pvt. Ltd.', 'Feature film production, cinematic distribution, creative arts, and entertainment media development.', 'Film & Entertainment', 'Baneshwor, Kathmandu')" class="text-pink-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 7 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-cyan-50 text-cyan-700 flex items-center justify-center text-2xl group-hover:bg-cyan-700 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-cyan-100 text-cyan-800 rounded-full">Organization 07</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-cyan-700 transition">Nepal Justice & Research Forum (NGO)</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Non-governmental research initiative dedicated to legal awareness, advocacy, policy analysis, and social justice.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Nepal Justice & Research Forum (NGO)', 'Non-governmental research initiative dedicated to legal awareness, advocacy, policy analysis, and social justice.', 'NGO & Legal Research', 'Baneshwor, Kathmandu')" class="text-cyan-700 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 8 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-2xl group-hover:bg-teal-700 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-spa"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-teal-100 text-teal-800 rounded-full">Organization 08</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-teal-700 transition">Nepal Meditation Center (Social Organization)</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Dedicated social organization promoting mental well-being, mindfulness training, yoga, and meditation retreats.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Nepal Meditation Center (Social Organization)', 'Dedicated social organization promoting mental well-being, mindfulness training, yoga, and meditation retreats.', 'Social Organization & Wellness', 'Baneshwor, Kathmandu')" class="text-teal-700 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 9 -->
-                <div class="bg-slate-50 rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="w-14 h-14 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
-                                <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <span class="text-xs font-bold px-3 py-1 bg-orange-100 text-orange-800 rounded-full">Association 09</span>
-                        </div>
-                        <h3 class="font-serif text-lg font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition">Federation of Nepal Businessman and House Owner Association</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Umbrella association supporting commercial traders, property owners, housing advocates, and business rights.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
-                        <span class="text-xs text-slate-500 font-medium"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Baneshwor HQ</span>
-                        <button onclick="openModal('Federation of Nepal Businessman and House Owner Association', 'Umbrella association supporting commercial traders, property owners, housing advocates, and business rights.', 'Business & Property Association', 'Baneshwor, Kathmandu')" class="text-orange-600 font-semibold text-sm hover:underline flex items-center gap-1">
-                            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Corporate Profile Section -->
-    <section id="profile" class="py-20 bg-slate-100 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-tbRed text-sm font-bold uppercase tracking-widest">Corporate Overview</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Corporate Profile & Headquarters</h2>
-                <p class="text-slate-600 text-base">
-                    Discover our organizational foundation, centralized management structure, and leadership based in Baneshwor, Kathmandu.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-tbGreen text-sm font-bold uppercase tracking-widest">About T.B Group HQ</span>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">Headquartered in Baneshwor, Kathmandu</h3>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Headquartered in the vibrant commercial hub of **Baneshwor, Kathmandu**, **Twanabasu Business Group (T.B Group)** stands as a dynamic multi-sector umbrella organization overseeing 9 premier corporate entities and social organizations.
-                    </p>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Under the esteemed leadership of Chairman **H.R. Twanabasu**, our unified management structure ensures that all group companies maintain exceptional operational standards, unified hotlines, and an unwavering dedication to national development.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4">
-                        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <span class="block font-bold text-tbRed text-2xl mb-1">H.R. Twanabasu</span>
-                            <span class="text-xs font-semibold text-slate-600">Group Chairman</span>
-                        </div>
-                        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <span class="block font-bold text-tbGreen text-2xl mb-1">Baneshwor</span>
-                            <span class="text-xs font-semibold text-slate-600">Central Kathmandu Office</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-6">
-                    <div class="gradient-border shadow-xl">
-                        <div class="gradient-border-inner p-8 bg-white text-slate-900 space-y-6">
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-12 h-12 rounded-xl bg-tbGreen/10 text-tbGreen flex items-center justify-center font-bold text-xl">
-                                        <i class="fa-solid fa-building"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-bold text-slate-900">T.B Group Headquarters</h4>
-                                        <p class="text-xs text-slate-500">Unified Corporate Office</p>
-                                    </div>
-                                </div>
-                                <span class="px-3 py-1 rounded-full bg-emerald-50 text-tbGreen font-semibold text-xs border border-emerald-200">Verified HQ</span>
-                            </div>
-                            <div class="space-y-4 text-sm text-slate-700">
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-user-tie text-tbYellow mt-1"></i>
-                                    <div>
-                                        <span class="text-slate-400 block text-xs">Chairman</span>
-                                        <span class="font-bold text-slate-800">H.R. Twanabasu</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-location-dot text-tbRed mt-1"></i>
-                                    <div>
-                                        <span class="text-slate-400 block text-xs">Address</span>
-                                        <span class="font-semibold text-slate-800">New Baneshwor, Kathmandu, Nepal</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-phone text-tbGreen mt-1"></i>
-                                    <div>
-                                        <span class="text-slate-400 block text-xs">Shared Hotlines (All 9 Companies)</span>
-                                        <span class="font-bold text-slate-800">01-5242096 / 9851420084 / 9765014003</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-3">
-                                    <i class="fa-solid fa-envelope text-tbYellow mt-1"></i>
-                                    <div>
-                                        <span class="text-slate-400 block text-xs">Shared Official Email</span>
-                                        <span class="font-semibold text-slate-800">twanabasugroup@gmail.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section id="leadership" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="bg-slate-900 rounded-3xl p-8 sm:p-14 text-white relative overflow-hidden shadow-2xl">
-                <div class="absolute right-0 bottom-0 translate-x-12 translate-y-12 w-80 h-80 bg-tbGreen/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="max-w-3xl space-y-6 relative z-10">
-                    <span class="text-tbYellow text-sm font-bold uppercase tracking-widest">Executive Leadership</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold">Guided by Visionary Leadership</h2>
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                        Under the esteemed leadership of Chairman <strong class="text-white font-semibold">H.R. Twanabasu</strong>, Twanabasu Business Group has continually expanded its horizons across 9 distinct enterprises. His strategic foresight directs our entire portfolio toward high standards of ethical practice, innovation, and sustainable national impact.
-                    </p>
-                    <div class="pt-4 flex flex-wrap items-center gap-6 text-sm text-slate-300">
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tbGreen"></i> Chairman: H.R. Twanabasu</span>
-                        <span class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-tbGreen"></i> Corporate HQ: Baneshwor, Kathmandu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <div class="lg:col-span-5 space-y-6">
-                    <span class="text-tbRed text-sm font-bold uppercase tracking-widest">Get In Touch</span>
-                    <h2 class="font-serif text-3xl font-bold text-slate-900">Contact T.B Group & Subsidiaries</h2>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        For inquiries regarding any of our 9 companies or organizations, partnerships, or corporate services, please reach out via our central office in Baneshwor.
-                    </p>
-
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-red-50 text-tbRed flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-location-dot text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Headquarters Location</h4>
-                                <p class="text-slate-600 text-sm">New Baneshwor, Kathmandu, Nepal</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-tbGreen flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-phone text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Shared Telephone Hotlines</h4>
-                                <p class="text-slate-600 text-sm font-semibold">015242096 / 9851420084 / 9765014003</p>
-                                <span class="text-xs text-slate-400">Valid for all 9 group companies & organizations</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-envelope text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Official Email</h4>
-                                <p class="text-slate-600 text-sm font-semibold">twanabasugroup@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Your Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-tbGreen bg-slate-50 text-sm" placeholder="Enter full name">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Phone Number</label>
-                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-tbGreen bg-slate-50 text-sm" placeholder="Enter phone number">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Select Company / Department</label>
-                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-tbGreen bg-slate-50 text-sm">
-                                <option>General Inquiry / T.B Group HQ</option>
-                                <option>Max Medical College & Hospital Pvt. Ltd.</option>
-                                <option>Twanabasu Land Ploting & Housing Pvt. Ltd.</option>
-                                <option>Twanabasu Engineering Design & Construction Pvt. Ltd.</option>
-                                <option>Twanabasu Trading & Industry Pvt. Ltd.</option>
-                                <option>Twanabasu Media & Television Pvt. Ltd.</option>
-                                <option>Twanabasu Film Pvt. Ltd.</option>
-                                <option>Nepal Justice & Research Forum (NGO)</option>
-                                <option>Nepal Meditation Center (Social Organization)</option>
-                                <option>Federation of Nepal Businessman and House Owner Association</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase text-slate-700 mb-1">Your Message</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-tbGreen bg-slate-50 text-sm" placeholder="Type your inquiry or message here..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-tbGreen hover:bg-emerald-700 text-white font-semibold py-4 rounded-xl shadow-lg transition">
-                            Submit Inquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-tbDark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-            <div>
-                <div class="font-serif font-bold text-white text-lg">Twanabasu Business Group (T.B Group)</div>
-                <p class="text-xs text-slate-500 mt-1">Connecting 9 Group Companies, Industries, and Social Organizations in Baneshwor, Kathmandu.</p>
-            </div>
-            <div class="text-xs text-slate-500">
-                &copy; 2026 Twanabasu Business Group. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- Detail Modal -->
-    <div id="company-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative animate-fade-in border border-slate-200">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center transition">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-            <span id="modal-category" class="text-xs font-bold px-3 py-1 bg-emerald-100 text-tbGreen rounded-full uppercase tracking-wider">Sector</span>
-            <h3 id="modal-title" class="font-serif text-2xl font-bold text-slate-900 mt-3 mb-2">Company Name</h3>
-            <p id="modal-location" class="text-xs text-tbRed font-semibold mb-4 flex items-center gap-1">
-                <i class="fa-solid fa-location-dot"></i> <span>Baneshwor, Kathmandu</span>
-            </p>
-            <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6">
-                Company description goes here...
-            </p>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2 mb-6">
-                <div class="flex items-center justify-between text-slate-700">
-                    <span class="font-semibold"><i class="fa-solid fa-phone text-tbGreen mr-1"></i> Hotlines:</span>
-                    <span>01-5242096 / 9851420084</span>
-                </div>
-                <div class="flex items-center justify-between text-slate-700">
-                    <span class="font-semibold"><i class="fa-solid fa-envelope text-tbYellow mr-1"></i> Email:</span>
-                    <span>twanabasugroup@gmail.com</span>
-                </div>
-            </div>
-            <div class="flex gap-3">
-                <a href="#contact" onclick="closeModal()" class="flex-1 bg-tbGreen hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition">
-                    Contact This Entity
-                </a>
-                <button onclick="closeModal()" class="px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3 rounded-xl text-sm transition">
-                    Close
-                </button>
-            </div>
-        </div>
+    <!-- Bottom Note -->
+    <div class="notice-footer-note">
+        प्रकाशित गर्नुअघि भुक्तानीको अवस्था तथा विवरण पुष्टि गर्नुहोस।
     </div>
+</div>
 
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        function openModal(title, desc, category, location) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-desc').innerText = desc;
-            document.getElementById('modal-category').innerText = category;
-            document.getElementById('modal-location').querySelector('span').innerText = location;
-            document.getElementById('company-modal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('company-modal').classList.add('hidden');
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            alert('Thank you! Your message has been sent successfully to Twanabasu Business Group.');
-            event.target.reset();
-        }
-    </script>
 </body>
 </html>
